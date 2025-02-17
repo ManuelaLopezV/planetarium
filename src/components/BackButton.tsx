@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { FC } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
@@ -10,10 +11,16 @@ interface BackButtonProps {
 
 const BackButton: FC<BackButtonProps> = ({ text = "Regresar" }) => {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Función para manejar el click y regresar a la página anterior
+  // Función para manejar el click y regresar a la página anterior con su paginación y filtros
   const handleBackClick = () => {
-    router.push("/"); // Redirige al listado de planetas
+    if (window.history.length > 1) {
+      router.back(); // Regresa a la página anterior en el historial
+    } else {
+      // Si no hay historial, vuelve a la lista de planetas con los parámetros actuales
+      router.push(`/?${searchParams.toString()}`);
+    }
   };
 
   return (

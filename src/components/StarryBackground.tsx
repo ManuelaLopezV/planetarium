@@ -1,5 +1,6 @@
 "use client";
 
+// Componente que crea un fondo animado con estrellas
 const StarryBackground = () => {
   return (
     <div className="fixed inset-0 w-full h-full bg-black -z-10">

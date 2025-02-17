@@ -2,6 +2,7 @@
 import { usePlanetStore } from "@/store/planets";
 import { getSpanishPlanetName } from "../utils";
 
+// Componente Header que muestra el título de la aplicación y el planeta favorito
 function Header() {
   const { favoritePlanet } = usePlanetStore();
   return (

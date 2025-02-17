@@ -2,14 +2,17 @@
 import React from "react";
 import { PlanetCard } from "./PlanetCard";
 import { useRouter } from "next/navigation";
+import { Planet } from "@/types";
 
+// Componente PlanetList que muestra una lista de planetas usando el componente PlanetCard
 interface PlanetListProps {
-  planets: any[];
+  planets: Planet[];
 }
 
 const PlanetList: React.FC<PlanetListProps> = ({ planets }) => {
   const router = useRouter();
 
+  // Función que maneja el click en un planeta y redirige a la página de detalles
   const onPlanetClick = (id: string) => {
     router.push(`/planet-detail/${id}`);
   };

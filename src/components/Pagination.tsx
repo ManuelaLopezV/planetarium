@@ -6,6 +6,7 @@ interface PaginationProps {
   onPageChange: (newPage: number) => void;
 }
 
+// Componente Pagination que maneja la paginación de los planetas
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,
   totalPages,

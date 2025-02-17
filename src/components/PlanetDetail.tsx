@@ -4,7 +4,9 @@ import { getPlanetImage, getSpanishPlanetName } from "../utils";
 import { Planet } from "../types";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { usePlanetStore } from "@/store/planets";
+import Image from "next/image";
 
+// Componente PlanetDetail que muestra los detalles de un planeta
 const PlanetDetail: FC<{ planet: Planet }> = ({
   planet,
 }: {
@@ -13,12 +15,14 @@ const PlanetDetail: FC<{ planet: Planet }> = ({
   const { favoritePlanet, setFavoritePlanet } = usePlanetStore();
 
   return (
-    <section className="w-[70%] min-h-[60%] h-auto flex flex-col bg-gradient-to-r bg-white opacity-80 shadow-lg p-6 rounded-lg md:w-[60%] lg:w-[50%] xl:w-[40%]">
+    <section className="w-[70%] min-h-[60%] h-auto flex flex-col bg-gradient-to-r bg-white opacity-80 shadow-lg p-6 rounded-lg md:w-[60%] lg:w-[50%] xl:flex-row xl:w-[70%]">
       <article className="flex justify-center items-center">
-        <img
+        <Image
+          width={500}
+          height={500}
           src={getPlanetImage(planet.englishName)}
           alt={planet.englishName}
-          className="object-contain w-[85%] sm:w-[70%] lg:w-[60%]"
+          className="object-contain w-[85%] sm:w-[70%] lg:w-[60%] xl:w-[75%]"
         />
       </article>
       <article className="p-4 text-black flex flex-col items-center justify-between">
@@ -26,7 +30,8 @@ const PlanetDetail: FC<{ planet: Planet }> = ({
           <h2 className="text-2xl text-center font-bold mb-4 sm:text-3xl">
             {getSpanishPlanetName(planet.englishName)}
           </h2>
-          <div className="sm:pl-10">
+          {/* Información del detalle de cada planeta */}
+          <div className="sm:pl-10 xl:pl-0">
             <p className="text-sm my-2 sm:text-lg">
               <strong>Masa:</strong> {planet.mass?.massValue} kg
             </p>

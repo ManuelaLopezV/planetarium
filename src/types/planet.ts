@@ -13,6 +13,7 @@ export interface Planet {
   isPlanet?: boolean;
   discoveredBy?: string;
   discoveryDate?: string;
+  image?: string;
 }
 
 export const solarSystemOrder = [
@@ -20,7 +21,7 @@ export const solarSystemOrder = [
   "Venus",
   "Tierra",
   "Marte",
-  "Jupiter",
+  "Júpiter",
   "Saturno",
   "Urano",
   "Neptuno",

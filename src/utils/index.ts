@@ -8,9 +8,6 @@ export const planetNamesInSpanish: { [key: string]: string } = {
   Saturn: "Saturno",
   Uranus: "Urano",
   Neptune: "Neptuno",
-  Pluto: "Plutón",
-  Sun: "Sol",
-  Moon: "Luna",
 };
 
 export const planetImages: Record<string, string> = {

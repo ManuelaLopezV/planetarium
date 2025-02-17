@@ -6,6 +6,7 @@ interface SearchInputProps {
   onSearchChange: (value: string) => void;
 }
 
+// Componente de entrada de búsqueda para filtrar planetas
 const SearchInput: React.FC<SearchInputProps> = ({
   search,
   onSearchChange,

@@ -5,6 +5,7 @@ interface PlanetSortProps {
   onSortChange: (value: string) => void;
 }
 
+// Componente que permite ordenar los planetas
 const PlanetSort: React.FC<PlanetSortProps> = ({ sortOrder, onSortChange }) => {
   return (
     <select
