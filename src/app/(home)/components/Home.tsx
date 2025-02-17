@@ -2,13 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { getDummyPlanets, getPlanets } from "../actions/planets";
 import { SearchInput } from "@/components/SearchInput";
 import { PlanetSort } from "@/components/PlanetSort";
 import { PlanetList } from "@/components/PlanetList";
 import { Pagination } from "@/components/Pagination";
 import { solarSystemOrder } from "@/types";
 import { getPlanetImage } from "@/utils";
+import { getPlanets } from "../actions/planets";
 
 function Home() {
   const router = useRouter();
@@ -24,7 +24,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getDummyPlanets();
+      const data = await getPlanets();
       const planetsWithImages = data.map((planet) => ({
         ...planet,
         image: getPlanetImage(planet.englishName),

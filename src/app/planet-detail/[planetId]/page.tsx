@@ -1,4 +1,4 @@
-import { getDummyPlanetDetails } from "@/app/(home)/actions/planets";
+import { getPlanetDetails } from "@/app/(home)/actions/planets";
 import { Planet } from "@/types";
 import BackButton from "@/components/BackButton";
 import { PlanetDetail } from "@/components/PlanetDetail";
@@ -10,7 +10,7 @@ export default async function PlanetDetailPage({
 }) {
   const { planetId } = await params;
 
-  const planet: Planet | null = await getDummyPlanetDetails(planetId);
+  const planet: Planet | null = await getPlanetDetails(planetId);
 
   if (!planet) {
     return <h1>Planeta no encontrado</h1>;
