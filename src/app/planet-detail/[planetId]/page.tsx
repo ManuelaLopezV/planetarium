@@ -18,7 +18,7 @@ export default async function PlanetDetailPage({
 
   return (
     <>
-      <div className="p-4">
+      <div className="pt-14">
         <BackButton />
       </div>
       <PlanetDetail planet={planet} />

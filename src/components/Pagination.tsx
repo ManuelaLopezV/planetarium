@@ -20,7 +20,7 @@ const Pagination: React.FC<PaginationProps> = ({
       >
         ⬅ Anterior
       </button>
-      <span className="px-4 py-2 bg-gray-800 rounded">
+      <span className="text-sm sm:text-base px-4 py-2 bg-gray-800 rounded">
         {currentPage} / {totalPages}
       </span>
       <button

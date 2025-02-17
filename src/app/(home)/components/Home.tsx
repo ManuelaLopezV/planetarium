@@ -74,9 +74,9 @@ function Home() {
   }, [search, sortOrder, currentPage, router]);
 
   return (
-    <section className="h-[100vh] text-white p-4 flex flex-col items-center justify-center">
+    <section className="text-white py-16 px-5 flex flex-col items-center justify-center lg:gap-4 xl:h-[100vh]">
       {/* Filtros */}
-      <div className="flex flex-col sm:flex-row gap-4 mb-4">
+      <div className="flex flex-col gap-4 mt-6 mb-4 lg:flex-row lg:mt-0">
         <SearchInput search={search} onSearchChange={setSearch} />
         <PlanetSort
           sortOrder={sortOrder}

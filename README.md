@@ -9,6 +9,7 @@
 - **Zustand**: Biblioteca para el manejo del estado global.
 - **Zustand Persist**: Middleware para persistir el estado en el almacenamiento local.
 - **TailwindCSS**: Para el estilizado de componentes.
+- **Framer Motion**: Para incluir animaciones y efectos a los componentes.
 
 ## 🚀 Iniciando el Proyecto
 
@@ -72,6 +73,6 @@ Para mantener el estado del planeta favorito, utilizamos Zustand junto con el mi
 
 ## 📞 Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de [mi correo electrónico](mailto:tu-email@example.com).
+Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de [manulopezv17@gmail.com].
 
 ¡Gracias por visitar Planetarium App! 🌠
