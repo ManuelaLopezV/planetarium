@@ -27,7 +27,7 @@ function PlanetCard({ planet, onClick }: PlanetCardProps) {
   const { favoritePlanet } = usePlanetStore();
   return (
     <motion.div
-      className="bg-gray-800 w-[300px] h-[300px] p-6 rounded-lg shadow-lg cursor-pointer border-gray-500 hover:bg-gray-700"
+      className="bg-gray-800 w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] p-6 rounded-lg shadow-lg cursor-pointer border-gray-500 hover:bg-gray-700"
       onClick={onClick}
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
